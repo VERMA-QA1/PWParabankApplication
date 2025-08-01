@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "accountId": {
+        "type": "number"
+      },
+      "type": {
+        "type": "string"
+      },
+      "date": {
+        "type": "number"
+      },
+      "amount": {
+        "type": "number"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "accountId",
+      "type",
+      "date",
+      "amount",
+      "description"
+    ]
+  }
+}
