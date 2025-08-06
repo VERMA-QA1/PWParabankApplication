@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "test for fabric qa lead",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "full-report": "npm run test && allure generate allure-results --clean && allure open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VERMA-QA1/fabricQA.git"
@@ -17,7 +20,8 @@
   "homepage": "https://github.com/VERMA-QA1/fabricQA#readme",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.1.0"
+    "@types/node": "^24.1.0",
+    "allure-playwright": "^3.3.3"
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0",

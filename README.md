@@ -20,11 +20,18 @@ It covers both UI and API scenarios, including user registration, login, account
    npx playwright show-report
    ```
 
-4. **Framework Best Practices:**  
+4. **View the test report:**
+   ```
+   npm run full-report
+   ```
+
+5. **Framework Best Practices:**  
   - Page Object Model for maintainable UI code
   - Utility and helper functions for data and schema validation
   - Step-wise test reporting using `test.step`
   - Reusable JSON schema validation with AJV
+  - separate files for constants urls
+  - reporter configured
 
 ## Structure
 
@@ -33,6 +40,8 @@ It covers both UI and API scenarios, including user registration, login, account
 - `utils/` - Helper functions and schema validation
 - `data/` - Static data and constants
 - `.env` - Base URL
+- `config` - Api URLs
+- Jenkinsfile - Jenkins integration
 
 ## Notes
 - some test data is added within Test file, can be updated as needed
