@@ -4,17 +4,17 @@ import { BillPayPageConstants } from '../data/constants';
 import { UserDetails } from '../data/user-details';
 
 export class BillPay extends CommonComponents {
-    readonly payeeNameTextbox: Locator;
-    readonly addressTextbox: Locator;
-    readonly cityTextbox: Locator;
-    readonly stateTextbox: Locator;
-    readonly zipcodeTextbox: Locator;
-    readonly phoneTextbox: Locator;
-    readonly toAccountTextbox: Locator;
-    readonly toAccountConfirmTextbox: Locator;
-    readonly amountTextbox: Locator;
-    readonly fromAccountDropdown: Locator;
-    readonly sendPaymentButton: Locator;
+    private payeeNameTextbox: Locator;
+    private addressTextbox: Locator;
+    private cityTextbox: Locator;
+    private stateTextbox: Locator;
+    private zipcodeTextbox: Locator;
+    private phoneTextbox: Locator;
+    private toAccountTextbox: Locator;
+    private toAccountConfirmTextbox: Locator;
+    private amountTextbox: Locator;
+    private fromAccountDropdown: Locator;
+    private sendPaymentButton: Locator;
 
     constructor(page: Page) {
         super(page);

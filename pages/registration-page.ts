@@ -5,19 +5,19 @@ import { RegistrationPageConstants } from '../data/constants';
 
 
 export class RegistrationPage extends CommonComponents{
-    readonly registerLink: Locator;
-    readonly firstNameTextbox: Locator;
-    readonly lastNameTextbox: Locator;
-    readonly streetTextbox: Locator;
-    readonly cityTextbox: Locator;
-    readonly stateTextbox: Locator;
-    readonly zipcodeTextbox: Locator;
-    readonly phoneTextbox: Locator;
-    readonly ssnTextbox: Locator;
-    readonly usernameTextbox: Locator;
-    readonly passwordTextbox: Locator;
-    readonly confirmPasswordTextbox: Locator;
-    readonly registerButton: Locator;
+    private registerLink: Locator;
+    private firstNameTextbox: Locator;
+    private lastNameTextbox: Locator;
+    private streetTextbox: Locator;
+    private cityTextbox: Locator;
+    private stateTextbox: Locator;
+    private zipcodeTextbox: Locator;
+    private phoneTextbox: Locator;
+    private ssnTextbox: Locator;
+    private usernameTextbox: Locator;
+    private passwordTextbox: Locator;
+    private confirmPasswordTextbox: Locator;
+    private registerButton: Locator;
 
     constructor(page: Page) {
         super(page);

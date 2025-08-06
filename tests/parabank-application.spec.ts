@@ -16,8 +16,8 @@ test('Parabank Application', async ({ page }) => {
     
     let accountNumber1: any;
     let accountNumber2: any;
-    const newAccountBalanceAmount: number = 100; // This is fixed amount which is transferred to new account
-    const newAccountBalance: string = `$${newAccountBalanceAmount}.00`;
+    let newAccountBalanceAmount: number; 
+    let newAccountBalanceText: string;
     const transferAmount: number = 50;
     const billPaymentAmount: number = 20;
     let balance: any;
@@ -49,13 +49,14 @@ test('Parabank Application', async ({ page }) => {
     });
 
     await test.step('5. Create a savings account', async () => {
-        await accountsPage.createSavingsAccount(accountNumber1);
+        newAccountBalanceAmount = await accountsPage.createSavingsAccount(accountNumber1);
+        newAccountBalanceText = `$${newAccountBalanceAmount}.00`;
         accountNumber2 = await accountsPage.getNewAccountNumber();
     });
 
     await test.step('6. Validate New Account in Account Overview', async () => {
         await accountsPage.openAccountsOverviewPage();
-        await accountsPage.validateNewAccountBalance(accountNumber2, newAccountBalance);
+        await accountsPage.validateNewAccountBalance(accountNumber2, newAccountBalanceText);
     });
 
     await test.step('7. Transfer funds and verify transfer in accounts overview', async () => {

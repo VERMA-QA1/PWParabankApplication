@@ -3,10 +3,10 @@ import { CommonComponents } from './common-components';
 import { TransferFundsPageConstants } from '../data/constants';
 
 export class TransferFunds extends CommonComponents {
-    readonly amountTextbox: Locator;
-    readonly fromAccountDropdown: Locator;
-    readonly toAccountDropdown: Locator;
-    readonly TransferFundsButton: Locator;
+    private amountTextbox: Locator;
+    private fromAccountDropdown: Locator;
+    private toAccountDropdown: Locator;
+    private TransferFundsButton: Locator;
 
     constructor(page: Page) {
         super(page);
